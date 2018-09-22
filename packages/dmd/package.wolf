@@ -1,0 +1,14 @@
+
+# the default "state" we want when this package is installed
+default_install built
+
+[source]
+
+
+[built]
+implements d-compiler
+
+# NOTE: for now this is a hack...these files shouldn't be "source" files
+#       but the package manager isn't ready to handle building dmd yet
+install --exe --path gen$(cpu_platform)/dmd
+install gen$(cpu_platform)/dmd.conf

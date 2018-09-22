@@ -1,0 +1,8 @@
+
+default_install built
+
+[source]
+archive-source http://download.savannah.gnu.org/releases/tinycc/tcc-0.9.27.tar.bz2
+
+[built]
+implements c-compiler

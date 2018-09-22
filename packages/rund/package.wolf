@@ -1,0 +1,8 @@
+[source]
+git-source github.com/marler8997/rund 5c6556f2b2f50b4d9d2fe4fde932c5507400f182
+
+[built]
+
+require d-compiler.built
+build "$(d-compiler.build.exe) -i -I=$(source)/src -run makd.d build"
+install --exe --path $(cwd)/bin/rund

@@ -1,0 +1,12 @@
+
+[source]
+git-source github.com/marler8997/helloworld 55714b240f9368cb469ec6d6bbf2c15cff13270a
+
+[built]
+require linker.built
+require d-compiler.built
+
+build "$(d-compiler.built.exe) -conf= -betterC -c $(source)/helloworld.d"
+build "$(linker.build.exe) -o helloworld helloworld.o"
+
+install --exe helloworld
